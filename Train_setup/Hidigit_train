@@ -1,0 +1,45 @@
+Dataname = 'Hdigit'
+parser = argparse.ArgumentParser(description='train')
+parser.add_argument('--dataset', default=Dataname)
+parser.add_argument('--batch_size', default=256, type=int)
+parser.add_argument("--temperature_f", default=1.0)
+parser.add_argument("--temperature_l", default=1.0)
+parser.add_argument("--learning_rate", default=0.0001)
+parser.add_argument("--weight_decay", default=0.)
+parser.add_argument("--workers", default=8)
+parser.add_argument("--mse_epochs", default=150)
+parser.add_argument("--con_epochs", default=150)
+parser.add_argument("--feature_dim", default=512)
+parser.add_argument("--extract_feature_dim", default=512)
+parser.add_argument("--seed", type=int, default=15)
+parser.add_argument('--num_heads', type=int, default=8)
+parser.add_argument('--hidden_dim', type=int, default=256)
+parser.add_argument('--ffn_size', type=int, default=32)
+parser.add_argument('--attn_bias_dim', type=int, default=6)
+parser.add_argument('--attention_dropout_rate', type=float, default=0.5)
+ACC = 0.9308 NMI = 0.8518 PUR=0.9308 ARI = 0.8536
+
+
+parser.add_argument('--num_heads', type=int, default=4)
+ACC = 0.9319 NMI = 0.8527 PUR=0.9319 ARI = 0.8557
+
+
+parser.add_argument("--seed", type=int, default=10)
+ACC = 0.9322 NMI = 0.8536 PUR=0.9322 ARI = 0.8567
+
+parser.add_argument("--con_epochs", default=100)
+parser.add_argument("--seed", type=int, default=10)
+ACC = 0.9598 NMI = 0.9071 PUR=0.9598 ARI = 0.9133
+
+parser.add_argument("--mse_epochs", default=200)
+parser.add_argument("--con_epochs", default=100)
+parser.add_argument("--seed", type=int, default=10)
+ACC = 0.9610 NMI = 0.9091 PUR=0.9610 ARI = 0.9158
+
+
+parser.add_argument("--temperature_f", default=0.1)
+parser.add_argument("--temperature_l", default=0.5)
+parser.add_argument("--learning_rate", default=0.0005)
+parser.add_argument("--mse_epochs", default=150)
+parser.add_argument("--con_epochs", default=100)
+ACC = 0.9971 NMI = 0.9905 PUR=0.9971 ARI = 0.9936

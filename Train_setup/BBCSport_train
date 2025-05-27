@@ -1,0 +1,35 @@
+Dataname = 'BBCSport'
+parser = argparse.ArgumentParser(description='train')
+parser.add_argument('--dataset', default=Dataname)
+parser.add_argument('--batch_size', default=256, type=int)
+parser.add_argument("--temperature_f", default=1.0)
+parser.add_argument("--temperature_l", default=1.0)
+parser.add_argument("--learning_rate", default=0.0001)
+parser.add_argument("--weight_decay", default=0.)
+parser.add_argument("--workers", default=8)
+parser.add_argument("--mse_epochs", default=150)
+parser.add_argument("--con_epochs", default=150)
+parser.add_argument("--feature_dim", default=512)
+parser.add_argument("--extract_feature_dim", default=512)
+parser.add_argument("--seed", type=int, default=15)
+parser.add_argument('--num_heads', type=int, default=8)
+parser.add_argument('--hidden_dim', type=int, default=256)
+parser.add_argument('--ffn_size', type=int, default=32)
+parser.add_argument('--attn_bias_dim', type=int, default=6)
+parser.add_argument('--attention_dropout_rate', type=float, default=0.5)
+ACC = 0.8879 NMI = 0.7572 PUR=0.8879 ARI = 0.7492
+
+
+parser.add_argument('--ffn_size', type=int, default=16)  RELU
+parser.add_argument("--temperature_l", default=2.0)
+ACC = 0.8971 NMI = 0.7673 PUR=0.8971 ARI = 0.7771
+
+
+parser.add_argument('--ffn_size', type=int, default=16)  RELU
+ACC = 0.8971 NMI = 0.7599 PUR=0.8971 ARI = 0.7838
+
+parser.add_argument('--ffn_size', type=int, default=16)  RELU  公共信息使用的是TransformerEncoder
+ACC = 0.8897 NMI = 0.7569 PUR=0.8897 ARI = 0.7685
+
+parser.add_argument("--extract_feature_dim", default=128) 公共信息使用的是TransformerEncoder后加MLP
+ACC = 0.8989 NMI = 0.7726 PUR=0.8989 ARI = 0.7750

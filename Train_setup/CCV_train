@@ -1,0 +1,37 @@
+Dataname = 'CCV'
+parser = argparse.ArgumentParser(description='train')
+parser.add_argument('--dataset', default=Dataname)
+parser.add_argument('--batch_size', default=256, type=int)
+parser.add_argument("--temperature_f", default=0.5)
+parser.add_argument("--temperature_l", default=1.0)
+parser.add_argument("--learning_rate", default=0.0005)
+parser.add_argument("--weight_decay", default=0.)
+parser.add_argument("--workers", default=8)
+parser.add_argument("--mse_epochs", default=150)
+parser.add_argument("--con_epochs", default=150)
+parser.add_argument("--feature_dim", default=512)
+parser.add_argument("--extract_feature_dim", default=512)
+parser.add_argument("--seed", type=int, default=15)
+parser.add_argument('--num_heads', type=int, default=8)
+parser.add_argument('--hidden_dim', type=int, default=256)
+parser.add_argument('--ffn_size', type=int, default=16)
+parser.add_argument('--attn_bias_dim', type=int, default=6)
+parser.add_argument('--attention_dropout_rate', type=float, default=0.5)
+
+ACC = 0.3217 NMI = 0.3202 PUR=0.3607 ARI = 0.1550
+
+
+parser.add_argument("--temperature_f", default=1.0)
+ACC = 0.3008 NMI = 0.3165 PUR=0.3458 ARI = 0.1581
+
+parser.add_argument("--mse_epochs", default=200)
+ACC = 0.3137 NMI = 0.3172 PUR=0.3545 ARI = 0.1574
+
+
+parser.add_argument("--con_epochs", default=100)
+ACC = 0.3350 NMI = 0.3232 PUR=0.3756 ARI = 0.1615
+
+
+使用MLP
+ACC = 0.3272 NMI = 0.3196 PUR=0.3564 ARI = 0.1610
+

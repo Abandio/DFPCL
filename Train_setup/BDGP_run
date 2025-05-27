@@ -1,0 +1,24 @@
+Dataname = 'BDGP'
+parser = argparse.ArgumentParser(description='train')
+parser.add_argument('--dataset', default=Dataname)
+parser.add_argument('--batch_size', default=256, type=int)
+parser.add_argument("--temperature_f", default=1.0)
+parser.add_argument("--temperature_l", default=1.0)
+parser.add_argument("--learning_rate", default=0.0001)
+parser.add_argument("--weight_decay", default=0.)
+parser.add_argument("--workers", default=8)
+parser.add_argument("--mse_epochs", default=150)
+parser.add_argument("--con_epochs", default=150)
+parser.add_argument("--feature_dim", default=512)
+parser.add_argument("--extract_feature_dim", default=512)
+parser.add_argument("--seed", type=int, default=15)
+parser.add_argument('--num_heads', type=int, default=8)
+parser.add_argument('--hidden_dim', type=int, default=256)
+parser.add_argument('--ffn_size', type=int, default=16)
+parser.add_argument('--attn_bias_dim', type=int, default=6)
+parser.add_argument('--attention_dropout_rate', type=float, default=0.5)
+
+ACC = 0.9788 NMI = 0.9435 PUR=0.9788 ARI = 0.9482
+
+parser.add_argument("--extract_feature_dim", default=128) 公共信息使用的是TransformerEncoder后加MLP
+ACC = 0.9784 NMI = 0.9430 PUR=0.9784 ARI = 0.9472

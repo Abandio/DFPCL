@@ -1,0 +1,30 @@
+Dataname = 'Caltech-5V'
+parser = argparse.ArgumentParser(description='train')
+parser.add_argument('--dataset', default=Dataname)
+parser.add_argument('--batch_size', default=256, type=int)
+parser.add_argument("--temperature_f", default=1.0)
+parser.add_argument("--temperature_l", default=1.0)
+parser.add_argument("--learning_rate", default=0.0005)
+parser.add_argument("--weight_decay", default=0.)
+parser.add_argument("--workers", default=8)
+parser.add_argument("--mse_epochs", default=200)
+parser.add_argument("--con_epochs", default=200)
+parser.add_argument("--feature_dim", default=512)
+parser.add_argument("--extract_feature_dim", default=512)
+parser.add_argument("--seed", type=int, default=5)
+parser.add_argument('--num_heads', type=int, default=8)
+parser.add_argument('--hidden_dim', type=int, default=256)
+parser.add_argument('--ffn_size', type=int, default=16)
+parser.add_argument('--attn_bias_dim', type=int, default=6)
+parser.add_argument('--attention_dropout_rate', type=float, default=0.5)
+
+ACC = 0.6314 NMI = 0.6339 PUR=0.6393 ARI = 0.4539
+
+
+parser.add_argument("--learning_rate", default=0.0007)
+parser.add_argument("--mse_epochs", default=150)
+parser.add_argument("--con_epochs", default=100)
+ACC = 0.6471 NMI = 0.6583 PUR=0.6707 ARI = 0.5236
+
+
+
